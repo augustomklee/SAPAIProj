@@ -1,9 +1,5 @@
 SAPAI Development Guide
 ====================
-
-Development Workflow
-------------------
-
 Branch Names
 ~~~~~~~~~~~
 
@@ -17,17 +13,18 @@ Use descriptive names in kebab-case that briefly describe the feature or fix:
 Prepare your branch:
 ~~~~~~~~~~~~~~~~~~
 
-+----------------------------------+-----------------------------------------------------+
-| Command                          | Action                                              |
-+==================================+=====================================================+
-| ``git checkout main``            | Switch to the main branch to ensure you're up to   |
-|                                  | date                                               |
-+----------------------------------+-----------------------------------------------------+
-| ``git pull``                     | Download latest changes from the remote main branch |
-+----------------------------------+-----------------------------------------------------+
-| ``git checkout -b your-branch-   | Create and switch to a new branch for your         |
-| name``                           | feature/fix                                        |
-+----------------------------------+-----------------------------------------------------+
++-----------------------------------+---------------------------------------------------+
+| Command                           | Action                                            |
++===================================+===================================================+
+| ``git checkout main``             | Switch to the main branch to ensure you're up to  |
+|                                   | date                                              |
++-----------------------------------+---------------------------------------------------+
+| ``git pull``                      | Download latest changes from the remote main      |
+|                                   | branch                                            |
++-----------------------------------+---------------------------------------------------+
+| ``git checkout -b your-branch-    | Create and switch to a new branch for your       |
+| name``                            | feature/fix                                       |
++-----------------------------------+---------------------------------------------------+
 
 Make your changes:
 ~~~~~~~~~~~~~~~~
