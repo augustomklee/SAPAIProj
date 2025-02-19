@@ -601,6 +601,28 @@ def GainGold(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=None):
         apet.player.gold += amount
     return player, [player]
 
+def addBreadCrumb(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=None):
+    fixed_targets = fixed_targets or []
+
+    if apet.name != "pet-pigeon":
+        raise Exception("Only pigeons can add bread crumbs")
+    
+    shop = apet.shop
+    level = apet.level
+    targets = []
+
+    # number of bread crumbs added depends on level of pigeon
+
+    # for level in range(apet.level):
+    #     if slot.slot_type == "food":
+    #         temp_food = Food("milk")
+    #         temp_food.attack *= level
+    #         temp_food.health *= level
+    #         slot.item = temp_food
+    #         targets.append(slot)
+
+    return targets, [targets]
+
 
 def Evolve(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=None):
     fixed_targets = fixed_targets or []

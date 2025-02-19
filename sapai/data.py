@@ -1804,6 +1804,171 @@ data = {
                 },
             ],
         },
+        "pet-pigeon": {
+            "name": "Pigeon",
+            "id": "pet-pigeon",
+            "image": {
+                "source": "noto-emoji",
+                "commit": "e022fd6573782431ac9a65b520376b57511c31cd", # TODO add commit id?
+                "unicodeCodePoint": "🐖", # TODO add pigeon emoji?
+            },
+            "tier": 1,
+            "baseAttack": 3,
+            "baseHealth": 1,
+            "packs": ["StandardPack"],
+            "level1Ability": {
+                "description": "Sell: Stock one free Bread Crumbs",
+                "trigger": "Sell",
+                "triggeredBy": {"kind": "Self"},
+                "effect": {"kind": "addBreadCrumb", "shop": "Food", "food": "food-bread-crumb"},
+            },
+            "level2Ability": {
+                "description": "Sell: Stock two free Bread Crumbs",
+                "trigger": "Sell",
+                "triggeredBy": {"kind": "Self"},
+                "effect": {"kind": "addBreadCrumb", "shop": "Food", "food": "food-bread-crumb"},
+            },
+            "level3Ability": {
+                "description": "Sell: Stock three free Bread Crumbs",
+                "trigger": "Sell",
+                "triggeredBy": {"kind": "Self"},
+                "effect": {"kind": "addBreadCrumb", "shop": "Food", "food": "food-bread-crumb"},
+            },
+            "probabilities": [
+                {
+                    "kind": "shop",
+                    "turn": "turn-1",
+                    "perShop": {
+                        "StandardPack": 0.2976680384087793,
+                        "ExpansionPack1": 0.2976680384087793,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.1111111111111111,
+                        "ExpansionPack1": 0.1111111111111111,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-2",
+                    "perShop": {
+                        "StandardPack": 0.2976680384087793,
+                        "ExpansionPack1": 0.2976680384087793,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.1111111111111111,
+                        "ExpansionPack1": 0.1111111111111111,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-3",
+                    "perShop": {
+                        "StandardPack": 0.14973028138212574,
+                        "ExpansionPack1": 0.14973028138212574,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.05263157894736842,
+                        "ExpansionPack1": 0.05263157894736842,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-4",
+                    "perShop": {
+                        "StandardPack": 0.14973028138212574,
+                        "ExpansionPack1": 0.14973028138212574,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.05263157894736842,
+                        "ExpansionPack1": 0.05263157894736842,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-5",
+                    "perShop": {
+                        "StandardPack": 0.12681358024691358,
+                        "ExpansionPack1": 0.12681358024691358,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.03333333333333333,
+                        "ExpansionPack1": 0.03333333333333333,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-6",
+                    "perShop": {
+                        "StandardPack": 0.12681358024691358,
+                        "ExpansionPack1": 0.12681358024691358,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.03333333333333333,
+                        "ExpansionPack1": 0.03333333333333333,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-7",
+                    "perShop": {
+                        "StandardPack": 0.09404935520024527,
+                        "ExpansionPack1": 0.09404935520024527,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.024390243902439025,
+                        "ExpansionPack1": 0.024390243902439025,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-8",
+                    "perShop": {
+                        "StandardPack": 0.09404935520024527,
+                        "ExpansionPack1": 0.09404935520024527,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.024390243902439025,
+                        "ExpansionPack1": 0.024390243902439025,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-9",
+                    "perShop": {
+                        "StandardPack": 0.09796001985292535,
+                        "ExpansionPack1": 0.09796001985292535,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.02040816326530612,
+                        "ExpansionPack1": 0.02040816326530612,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-10",
+                    "perShop": {
+                        "StandardPack": 0.09796001985292535,
+                        "ExpansionPack1": 0.09796001985292535,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.02040816326530612,
+                        "ExpansionPack1": 0.02040816326530612,
+                    },
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-11",
+                    "perShop": {
+                        "StandardPack": 0.08328505725105906,
+                        "ExpansionPack1": 0.08328505725105906,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.017241379310344827,
+                        "ExpansionPack1": 0.017241379310344827,
+                    },
+                },
+            ],
+        },
         "pet-sloth": {
             "name": "Sloth",
             "id": "pet-sloth",
