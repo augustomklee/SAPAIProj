@@ -64,39 +64,39 @@ data = {
             },
             "tier": 1,
             "baseAttack": 2,
-            "baseHealth": 1,
+            "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Faint: Give a random friend +2/+1",
+                "description": "Faint: Give a random friend +1/+1",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "attackAmount": 2,
+                    "attackAmount": 1,
                     "healthAmount": 1,
                     "target": {"kind": "RandomFriend", "n": 1},
                     "untilEndOfBattle": False,
                 },
             },
             "level2Ability": {
-                "description": "Faint: Give a random friend +4/+2",
+                "description": "Faint: Give a random friend +2/+2",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "attackAmount": 4,
+                    "attackAmount": 2,
                     "healthAmount": 2,
                     "target": {"kind": "RandomFriend", "n": 1},
                     "untilEndOfBattle": False,
                 },
             },
             "level3Ability": {
-                "description": "Faint: Give a random friend +6/+3",
+                "description": "Faint: Give a random friend +3/+3",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "attackAmount": 6,
+                    "attackAmount": 3,
                     "healthAmount": 3,
                     "target": {"kind": "RandomFriend", "n": 1},
                     "untilEndOfBattle": False,
@@ -250,34 +250,34 @@ data = {
             "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Sell: Give two random friends +1 health",
+                "description": "Sell: Give two random friends +1 attack",
                 "trigger": "Sell",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "healthAmount": 1,
+                    "attackAmount": 1,
                     "target": {"kind": "RandomFriend", "n": 2},
                     "untilEndOfBattle": False,
                 },
             },
             "level2Ability": {
-                "description": "Sell: Give two random friends +2 health",
+                "description": "Sell: Give two random friends +2 attack",
                 "trigger": "Sell",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "healthAmount": 2,
+                    "attackAmount": 2,
                     "target": {"kind": "RandomFriend", "n": 2},
                     "untilEndOfBattle": False,
                 },
             },
             "level3Ability": {
-                "description": "Sell: Give two random friends +3 health",
+                "description": "Sell: Give two random friends +3 attack",
                 "trigger": "Sell",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "healthAmount": 3,
+                    "attackAmount": 3,
                     "target": {"kind": "RandomFriend", "n": 2},
                     "untilEndOfBattle": False,
                 },
@@ -655,10 +655,10 @@ data = {
             },
             "tier": 1,
             "baseAttack": 1,
-            "baseHealth": 2,
+            "baseHealth": 3,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Faint: Summon a 1/1 Cricket",
+                "description": "Faint: Summon a 1/1 Zombie Cricket",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -670,7 +670,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Faint: Summon a 2/2 Cricket",
+                "description": "Faint: Summon a 2/2 Zombie Cricket",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -682,7 +682,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Faint: Summon a 3/3 Cricket",
+                "description": "Faint: Summon a 3/3 Zombie Cricket",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -953,10 +953,10 @@ data = {
             },
             "tier": 1,
             "baseAttack": 2,
-            "baseHealth": 2,
+            "baseHealth": 3,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Level-up: Give all friends +1/+1",
+                "description": "Level-up: Give two friends +1/+1",
                 "trigger": "LevelUp",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -968,7 +968,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Level-up: Give all friends +2/+2",
+                "description": "Level-up: Give two friends +2/+2",
                 "trigger": "LevelUp",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -1532,40 +1532,37 @@ data = {
             },
             "tier": 1,
             "baseAttack": 1,
-            "baseHealth": 2,
+            "baseHealth": 3,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Buy: Give one random friend +1/+1",
+                "description": "Buy: Give one random friend +1 health",
                 "trigger": "Buy",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "RandomFriend", "n": 1},
-                    "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
             },
             "level2Ability": {
-                "description": "Buy: Give two random friend +1/+1",
+                "description": "Buy: Give two random friends +1 health",
                 "trigger": "Buy",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "RandomFriend", "n": 2},
-                    "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
             },
             "level3Ability": {
-                "description": "Buy: Give three random friend +1/+1",
+                "description": "Buy: Give three random friends +1 health",
                 "trigger": "Buy",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "RandomFriend", "n": 3},
-                    "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
@@ -1936,7 +1933,7 @@ data = {
                 "unicodeCodePoint": "🦀",
             },
             "tier": 2,
-            "baseAttack": 3,
+            "baseAttack": 4,
             "baseHealth": 1,
             "packs": ["StandardPack"],
             "level1Ability": {
@@ -2045,12 +2042,12 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🦤",
             },
-            "tier": 2,
-            "baseAttack": 2,
-            "baseHealth": 3,
+            "tier": 3,
+            "baseAttack": 4,
+            "baseHealth": 2,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Start of battle: Give 50% Attack to friend ahead.",
+                "description": "Start of battle: Give 50% attack to the nearest friend ahead.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -2063,7 +2060,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Start of battle: Give 100% Attack to friend ahead.",
+                "description": "Start of battle: Give 100% attack to the nearest friend ahead.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -2076,7 +2073,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Start of battle: Give 150% Attack to friend ahead.",
+                "description": "Start of battle: Give 150% attack to the nearest friend ahead.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -2157,32 +2154,10 @@ data = {
             },
             "tier": 3,
             "baseAttack": 3,
-            "baseHealth": 3,
+            "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Friend summoned: Gain +1 Attack or +1 Health.",
-                "trigger": "Summoned",
-                "triggeredBy": {"kind": "EachFriend"},
-                "effect": {
-                    "kind": "OneOf",
-                    "effects": [
-                        {
-                            "kind": "ModifyStats",
-                            "untilEndOfBattle": False,
-                            "target": {"kind": "Self"},
-                            "attackAmount": 1,
-                        },
-                        {
-                            "kind": "ModifyStats",
-                            "untilEndOfBattle": False,
-                            "target": {"kind": "Self"},
-                            "healthAmount": 1,
-                        },
-                    ],
-                },
-            },
-            "level2Ability": {
-                "description": "Friend summoned: Gain +2 Attack or +2 Health.",
+                "description": "Friend summoned: Gain +2 Attack and +1 Health until end of battle.",
                 "trigger": "Summoned",
                 "triggeredBy": {"kind": "EachFriend"},
                 "effect": {
@@ -2198,13 +2173,13 @@ data = {
                             "kind": "ModifyStats",
                             "untilEndOfBattle": False,
                             "target": {"kind": "Self"},
-                            "healthAmount": 2,
+                            "healthAmount": 1,
                         },
                     ],
                 },
             },
-            "level3Ability": {
-                "description": "Friend summoned: Gain +3 Attack or +3 Health.",
+            "level2Ability": {
+                "description": "Friend summoned: Gain +4 Attack and +2 Health until end of battle",
                 "trigger": "Summoned",
                 "triggeredBy": {"kind": "EachFriend"},
                 "effect": {
@@ -2214,7 +2189,29 @@ data = {
                             "kind": "ModifyStats",
                             "untilEndOfBattle": False,
                             "target": {"kind": "Self"},
-                            "attackAmount": 3,
+                            "attackAmount": 4,
+                        },
+                        {
+                            "kind": "ModifyStats",
+                            "untilEndOfBattle": False,
+                            "target": {"kind": "Self"},
+                            "healthAmount": 2,
+                        },
+                    ],
+                },
+            },
+            "level3Ability": {
+                "description": "Friend summoned: Gain +6 Attack and +3 Health  until end of battle",
+                "trigger": "Summoned",
+                "triggeredBy": {"kind": "EachFriend"},
+                "effect": {
+                    "kind": "OneOf",
+                    "effects": [
+                        {
+                            "kind": "ModifyStats",
+                            "untilEndOfBattle": False,
+                            "target": {"kind": "Self"},
+                            "attackAmount": 6,
                         },
                         {
                             "kind": "ModifyStats",
@@ -2451,13 +2448,13 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🐘",
             },
-            "tier": 2,
+            "tier": 3,
             "baseAttack": 3,
-            "baseHealth": 5,
+            "baseHealth": 7,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Before Attack: Deal 1 damage to 1 friends behind.",
-                "trigger": "BeforeAttack",
+                "description": "After Attack: Deal 1 damage to nearest friend behind.",
+                "trigger": "AfterAttack",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "DealDamage",
@@ -2466,8 +2463,8 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Before Attack: Deal 1 damage to 2 friends behind.",
-                "trigger": "BeforeAttack",
+                "description": "After Attack: Deal 1 damage to nearest friend behind. Triggers 2 times.",
+                "trigger": "AfterAttack",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "DealDamage",
@@ -2476,8 +2473,8 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Before Attack: Deal 1 damage to 3 friends behind.",
-                "trigger": "BeforeAttack",
+                "description": "Before Attack: Deal 1 damage to nearest friends behind. Triggers 3 times.",
+                "trigger": "AfterAttack",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "DealDamage",
@@ -2553,11 +2550,11 @@ data = {
                 "unicodeCodePoint": "🦩",
             },
             "tier": 2,
-            "baseAttack": 4,
+            "baseAttack": 3,
             "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Faint: Give the two friends behind +1/+1.",
+                "description": "Faint: Give the two nearest friends behind +1/+1.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -2569,7 +2566,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Faint: Give the two friends behind +2/+2.",
+                "description": "Faint: Give the two nearest friends behind +2/+2.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -2581,7 +2578,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Faint: Give the two friends behind +3/+3.",
+                "description": "Faint: Give the two nearest friends behind +3/+3.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -2722,7 +2719,7 @@ data = {
                 "unicodeCodePoint": "🦔",
             },
             "tier": 2,
-            "baseAttack": 3,
+            "baseAttack": 4,
             "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
@@ -3051,8 +3048,8 @@ data = {
                 "unicodeCodePoint": "🐀",
             },
             "tier": 2,
-            "baseAttack": 4,
-            "baseHealth": 5,
+            "baseAttack": 3,
+            "baseHealth": 6,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
                 "description": "Faint: summon one 1/1 Dirty Rat for the opponent that betrays him.",
@@ -3396,26 +3393,26 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Faint: Summon a level 2 tier 3 animal as a 2/2",
+                "description": "Faint: Summon a level 2 tier 3 animal as a 4/4",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonRandomPet",
                     "tier": 3,
-                    "baseAttack": 2,
-                    "baseHealth": 2,
+                    "baseAttack": 4,
+                    "baseHealth": 4,
                     "level": 2,
                 },
             },
             "level3Ability": {
-                "description": "Faint: Summon a level 3 tier 3 animal as a 2/2",
+                "description": "Faint: Summon a level 3 tier 3 animal as a 6/6",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonRandomPet",
                     "tier": 3,
-                    "baseAttack": 2,
-                    "baseHealth": 2,
+                    "baseAttack": 6,
+                    "baseHealth": 6,
                     "level": 3,
                 },
             },
@@ -3550,7 +3547,7 @@ data = {
             },
             "tier": 2,
             "baseAttack": 1,
-            "baseHealth": 3,
+            "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
                 "description": "Start of turn: Gain 1 gold.",
@@ -3812,11 +3809,11 @@ data = {
                 "unicodeCodePoint": "🦡",
             },
             "tier": 3,
-            "baseAttack": 5,
+            "baseAttack": 6,
             "baseHealth": 3,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Faint: Deal Attack damage to adjacent animals",
+                "description": "Faint: Deal 50% attack damage to adjacent pets",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -3826,7 +3823,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Faint: Deal Attack damage to adjacent animals",
+                "description": "Faint: Deal 100% attack damage to adjacent pets",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -3836,7 +3833,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Faint: Deal Attack damage to adjacent animals",
+                "description": "Faint: Deal 150% attack damage to adjacent pets",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -3908,31 +3905,21 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🐡",
             },
-            "tier": 3,
+            "tier": 4,
             "baseAttack": 3,
-            "baseHealth": 5,
+            "baseHealth": 6,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Hurt: Deal 2 damage to a random enemy.",
+                "description": "Hurt: Deal 3 damage to a random enemy.",
                 "trigger": "Hurt",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "DealDamage",
                     "target": {"kind": "RandomEnemy", "n": 1},
-                    "amount": 2,
+                    "amount": 3,
                 },
             },
             "level2Ability": {
-                "description": "Hurt: Deal 4 damage to a random enemy.",
-                "trigger": "Hurt",
-                "triggeredBy": {"kind": "Self"},
-                "effect": {
-                    "kind": "DealDamage",
-                    "target": {"kind": "RandomEnemy", "n": 1},
-                    "amount": 4,
-                },
-            },
-            "level3Ability": {
                 "description": "Hurt: Deal 6 damage to a random enemy.",
                 "trigger": "Hurt",
                 "triggeredBy": {"kind": "Self"},
@@ -3940,6 +3927,16 @@ data = {
                     "kind": "DealDamage",
                     "target": {"kind": "RandomEnemy", "n": 1},
                     "amount": 6,
+                },
+            },
+            "level3Ability": {
+                "description": "Hurt: Deal 9 damage to a random enemy.",
+                "trigger": "Hurt",
+                "triggeredBy": {"kind": "Self"},
+                "effect": {
+                    "kind": "DealDamage",
+                    "target": {"kind": "RandomEnemy", "n": 1},
+                    "amount": 9,
                 },
             },
             "probabilities": [
@@ -4151,41 +4148,41 @@ data = {
                 "unicodeCodePoint": "🐫",
             },
             "tier": 3,
-            "baseAttack": 2,
-            "baseHealth": 6,
+            "baseAttack": 3,
+            "baseHealth": 4,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Hurt: Give friend behind +2/+2",
+                "description": "Hurt: Give nearest friend behind +1/+2",
+                "trigger": "Hurt",
+                "triggeredBy": {"kind": "Self"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "FriendBehind", "n": 1},
+                    "attackAmount": 1,
+                    "healthAmount": 2,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "level2Ability": {
+                "description": "Hurt: Give nearest friend behind +2/+4",
                 "trigger": "Hurt",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "FriendBehind", "n": 1},
                     "attackAmount": 2,
-                    "healthAmount": 2,
-                    "untilEndOfBattle": False,
-                },
-            },
-            "level2Ability": {
-                "description": "Hurt: Give friend behind +4/+4",
-                "trigger": "Hurt",
-                "triggeredBy": {"kind": "Self"},
-                "effect": {
-                    "kind": "ModifyStats",
-                    "target": {"kind": "FriendBehind", "n": 1},
-                    "attackAmount": 4,
                     "healthAmount": 4,
                     "untilEndOfBattle": False,
                 },
             },
             "level3Ability": {
-                "description": "Hurt: Give friend behind +6/+6",
+                "description": "Hurt: Give nearest friend behind +3/+6",
                 "trigger": "Hurt",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "FriendBehind", "n": 1},
-                    "attackAmount": 6,
+                    "attackAmount": 3,
                     "healthAmount": 6,
                     "untilEndOfBattle": False,
                 },
@@ -4355,11 +4352,11 @@ data = {
                 "unicodeCodePoint": "🦒",
             },
             "tier": 3,
-            "baseAttack": 2,
-            "baseHealth": 4,
+            "baseAttack": 1,
+            "baseHealth": 2,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "End turn: Give friend ahead +1/+1",
+                "description": "End turn: Give the nearest friend ahead +1/+1",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -4371,7 +4368,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "End turn: Give 2 friends ahead +1/+1",
+                "description": "End turn: Give the nearest two friends ahead +1/+1",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -4383,7 +4380,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "End turn: Give 3 friends ahead +1/+1",
+                "description": "End turn: Give the nearest three friends ahead +1/+1",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -4457,11 +4454,23 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🦘",
             },
-            "tier": 3,
-            "baseAttack": 1,
-            "baseHealth": 2,
+            "tier": 2,
+            "baseAttack": 2,
+            "baseHealth": 3,
             "packs": ["StandardPack"],
             "level1Ability": {
+                "description": "Friend ahead attacks: Gain +1/+1",
+                "trigger": "AfterAttack",
+                "triggeredBy": {"kind": "FriendAhead", "n": 1},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "Self"},
+                    "attackAmount": 1,
+                    "healthAmount": 1,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "level2Ability": {
                 "description": "Friend ahead attacks: Gain +2/+2",
                 "trigger": "AfterAttack",
                 "triggeredBy": {"kind": "FriendAhead", "n": 1},
@@ -4473,27 +4482,15 @@ data = {
                     "untilEndOfBattle": False,
                 },
             },
-            "level2Ability": {
-                "description": "Friend ahead attacks: Gain +4/+4",
-                "trigger": "AfterAttack",
-                "triggeredBy": {"kind": "FriendAhead", "n": 1},
-                "effect": {
-                    "kind": "ModifyStats",
-                    "target": {"kind": "Self"},
-                    "attackAmount": 4,
-                    "healthAmount": 4,
-                    "untilEndOfBattle": False,
-                },
-            },
             "level3Ability": {
-                "description": "Friend ahead attacks: Gain +6/+6",
+                "description": "Friend ahead attacks: Gain +3/+3",
                 "trigger": "AfterAttack",
                 "triggeredBy": {"kind": "FriendAhead", "n": 1},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "Self"},
-                    "attackAmount": 6,
-                    "healthAmount": 6,
+                    "attackAmount": 3,
+                    "healthAmount": 3,
                     "untilEndOfBattle": False,
                 },
             },
@@ -4668,9 +4665,9 @@ data = {
             "baseHealth": 3,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Friend ahead attacks: Gain Melon Armor and +1 attack",
+                "description": "Friend ahead faints: Gain Melon Armor and +1 attack. Works 1 time per turn.",
                 "trigger": "Faint",
-                "triggeredBy": {"kind": "FriendAhead", "n": 1},
+                "triggeredBy": {"kind": "FriendAhead"},
                 "effect": {
                     "kind": "AllOf",
                     "effects": [
@@ -4687,11 +4684,12 @@ data = {
                         },
                     ],
                 },
+                "maxTriggers": 1,
             },
             "level2Ability": {
-                "description": "Friend ahead attacks: Gain Melon Armor and +2 attack",
+                "description": "Friend ahead faints: Gain Melon Armor and +2 attack. Works 2 time per turn.",
                 "trigger": "Faint",
-                "triggeredBy": {"kind": "FriendAhead", "n": 1},
+                "triggeredBy": {"kind": "FriendAhead"},
                 "effect": {
                     "kind": "AllOf",
                     "effects": [
@@ -4708,11 +4706,12 @@ data = {
                         },
                     ],
                 },
+                "maxTriggers": 2,
             },
             "level3Ability": {
-                "description": "Friend ahead attacks: Gain Melon Armor and +3 attack",
+                "description": "Friend ahead faints: Gain Melon Armor and +3 attack. Works 3 time per turn.",
                 "trigger": "Faint",
-                "triggeredBy": {"kind": "FriendAhead", "n": 1},
+                "triggeredBy": {"kind": "FriendAhead"},
                 "effect": {
                     "kind": "AllOf",
                     "effects": [
@@ -4729,6 +4728,7 @@ data = {
                         },
                     ],
                 },
+                "maxTriggers": 3,
             },
             "probabilities": [
                 {
@@ -4901,7 +4901,7 @@ data = {
             "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Pet eats shop food: Give it +1 Health",
+                "description": "Friendly ate food: Give it +1 Health. Works 4 times per turn.",
                 "trigger": "EatsShopFood",
                 "triggeredBy": {"kind": "EachFriend"},
                 "effect": {
@@ -4910,9 +4910,10 @@ data = {
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
+                "maxTriggers": 4,
             },
             "level2Ability": {
-                "description": "Pet eats shop food: Give it +2 Health",
+                "description": "Friendly ate food: Give it +2 Health. Works 4 times per turn.",
                 "trigger": "EatsShopFood",
                 "triggeredBy": {"kind": "EachFriend"},
                 "effect": {
@@ -4921,9 +4922,10 @@ data = {
                     "healthAmount": 2,
                     "untilEndOfBattle": False,
                 },
+                "maxTriggers": 4,
             },
             "level3Ability": {
-                "description": "Pet eats shop food: Give it +3 Health",
+                "description": "Friendly ate food: Give it +3 Health. Works 4 times per turn.",
                 "trigger": "EatsShopFood",
                 "triggeredBy": {"kind": "EachFriend"},
                 "effect": {
@@ -4932,6 +4934,7 @@ data = {
                     "healthAmount": 3,
                     "untilEndOfBattle": False,
                 },
+                "maxTriggers": 4,
             },
             "probabilities": [
                 {
@@ -5195,42 +5198,39 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🐌",
             },
-            "tier": 3,
+            "tier": 2,
             "baseAttack": 2,
             "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Buy: If you lost last battle, give all friends +2/+1",
+                "description": "Buy: If you lost last battle, give all friends +1 health",
                 "trigger": "BuyAfterLoss",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "EachFriend"},
-                    "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
             },
             "level2Ability": {
-                "description": "Buy: If you lost last battle, give all friends +4/+2",
+                "description": "Buy: If you lost last battle, give all friends +2 health",
                 "trigger": "BuyAfterLoss",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "EachFriend"},
-                    "attackAmount": 2,
                     "healthAmount": 2,
                     "untilEndOfBattle": False,
                 },
             },
             "level3Ability": {
-                "description": "Buy: If you lost last battle, give all friends +6/+3",
+                "description": "Buy: If you lost last battle, give all friends +3 health",
                 "trigger": "BuyAfterLoss",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "EachFriend"},
-                    "attackAmount": 3,
                     "healthAmount": 3,
                     "untilEndOfBattle": False,
                 },
@@ -5446,12 +5446,12 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🐢",
             },
-            "tier": 3,
-            "baseAttack": 1,
-            "baseHealth": 2,
+            "tier": 4,
+            "baseAttack": 2,
+            "baseHealth": 5,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Faint: Give friend behind Melon Armor",
+                "description": "Faint: Give Melon Perk to the nearest friend behind.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -5461,7 +5461,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Faint: Give 2 friends behind Melon Armor",
+                "description": "Faint: Give Melon Perk to the two nearest friends behind.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -5471,7 +5471,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Faint: Give 3 friends behind Melon Armor",
+                "description": "Faint: Give Melon Perk to the two nearest friends behind.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -5593,7 +5593,7 @@ data = {
             },
             "tier": 4,
             "baseAttack": 3,
-            "baseHealth": 8,
+            "baseHealth": 7,
             "packs": ["StandardPack"],
             "level1Ability": {
                 "description": "Start of battle: Swallow friend ahead and release it as a level 1 after fainting.",
@@ -5678,37 +5678,37 @@ data = {
             "baseHealth": 4,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "End turn: Gain +2/+2 if there is at least one Lvl. 3 friend.",
+                "description": "End turn: If this has a level 3 friend, gain +1 attack and +2 health.",
+                "trigger": "EndOfTurnWithLvl3Friend",
+                "triggeredBy": {"kind": "Player"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "Self"},
+                    "attackAmount": 1,
+                    "healthAmount": 2,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "level2Ability": {
+                "description": "End turn: If this has a level 3 friend, gain +2 attack and +4 health.",
                 "trigger": "EndOfTurnWithLvl3Friend",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "Self"},
                     "attackAmount": 2,
-                    "healthAmount": 2,
-                    "untilEndOfBattle": False,
-                },
-            },
-            "level2Ability": {
-                "description": "End turn: Gain +4/+4 if there is at least one Lvl. 3 friend.",
-                "trigger": "EndOfTurnWithLvl3Friend",
-                "triggeredBy": {"kind": "Player"},
-                "effect": {
-                    "kind": "ModifyStats",
-                    "target": {"kind": "Self"},
-                    "attackAmount": 4,
                     "healthAmount": 4,
                     "untilEndOfBattle": False,
                 },
             },
             "level3Ability": {
-                "description": "End turn: Gain +6/+6 if there is at least one Lvl. 3 friend.",
+                "description": "End turn: If this has a level 3 friend, gain +3 attack and +6 health.",
                 "trigger": "EndOfTurnWithLvl3Friend",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "Self"},
-                    "attackAmount": 6,
+                    "attackAmount": 3,
                     "healthAmount": 6,
                     "untilEndOfBattle": False,
                 },
@@ -5892,42 +5892,42 @@ data = {
                 "unicodeCodePoint": "🦌",
             },
             "tier": 4,
-            "baseAttack": 1,
-            "baseHealth": 1,
+            "baseAttack": 2,
+            "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Faint: Summon a 5/5 Bus with Splash Attack",
+                "description": "Faint: Summon one 5/3 Bus with Chili.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonPet",
                     "pet": "pet-bus",
                     "withAttack": 5,
-                    "withHealth": 5,
+                    "withHealth": 3,
                     "team": "Friendly",
                 },
             },
             "level2Ability": {
-                "description": "Faint: Summon a 10/10 Bus with Splash Attack",
+                "description": "Faint: Summon one 10/6 Bus with Chili.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonPet",
                     "pet": "pet-bus",
                     "withAttack": 10,
-                    "withHealth": 10,
+                    "withHealth": 6,
                     "team": "Friendly",
                 },
             },
             "level3Ability": {
-                "description": "Faint: Summon a 15/15 Bus with Splash Attack",
+                "description": "Faint: Summon one 15/9 Bus with Chili.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonPet",
                     "pet": "pet-bus",
                     "withAttack": 15,
-                    "withHealth": 15,
+                    "withHealth": 9,
                     "team": "Friendly",
                 },
             },
@@ -6018,38 +6018,38 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🐬",
             },
-            "tier": 4,
+            "tier": 3,
             "baseAttack": 4,
-            "baseHealth": 6,
+            "baseHealth": 3,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Start of battle: Deal 5 damage to the lowest health enemy",
+                "description": "Start of battle: Deal 4 damage to the lowest health enemy.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "DealDamage",
                     "target": {"kind": "LowestHealthEnemy"},
-                    "amount": 5,
+                    "amount": 4,
                 },
             },
             "level2Ability": {
-                "description": "Start of battle: Deal 10 damage to the lowest health enemy",
+                "description": "Start of battle: Deal 4 damage to the lowest health enemy. Triggers 2 times.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "DealDamage",
-                    "target": {"kind": "LowestHealthEnemy"},
-                    "amount": 10,
+                    "target": {"kind": "LowestHealthEnemy", "n": 2},
+                    "amount": 4,
                 },
             },
             "level3Ability": {
-                "description": "Start of battle: Deal 15 damage to the lowest health enemy",
+                "description": "Start of battle: Deal 15 damage to the lowest health enemy. Triggers 3 times.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "DealDamage",
-                    "target": {"kind": "LowestHealthEnemy"},
-                    "amount": 15,
+                    "target": {"kind": "LowestHealthEnemy", "n": 3},
+                    "amount": 4,
                 },
             },
             "probabilities": [
@@ -6141,10 +6141,10 @@ data = {
             },
             "tier": 4,
             "baseAttack": 4,
-            "baseHealth": 7,
+            "baseHealth": 5,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Knock out: Gain +3/+3.",
+                "description": "Knock out: Gain +3 attack and +3 health.",
                 "trigger": "KnockOut",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -6156,7 +6156,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Knock out: Gain +6/+6.",
+                "description": "Knock out: Gain +6 attack and +6 health.",
                 "trigger": "KnockOut",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -6168,7 +6168,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Knock out: Gain +9/+9.",
+                "description": "Knock out: Gain +9 attack and +9 health.",
                 "trigger": "KnockOut",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -6493,10 +6493,10 @@ data = {
             },
             "tier": 4,
             "baseAttack": 1,
-            "baseHealth": 2,
+            "baseHealth": 3,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "End turn: Give other Lvl. 2 and 3 friends +1/+1",
+                "description": "End turn: Give two level 2 or higher friends +1 attack and +1 health.",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -6508,7 +6508,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "End turn: Give other Lvl. 2 and 3 friends +2/+2",
+                "description": "End turn: Give two level 2 or higher friends +2 attack and +2 health.",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -6520,7 +6520,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "End turn: Give other Lvl. 2 and 3 friends +3/+3",
+                "description": "End turn: Give two level 2 or higher friends +3 attack and +3 health.",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -6775,7 +6775,7 @@ data = {
             "baseHealth": 5,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Start of battle: Reduce the highest Health enemy by 33%.",
+                "description": "Start of battle: Reduce the highest health enemy by 33%.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -6785,7 +6785,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Start of battle: Reduce the highest Health enemy by 66%.",
+                "description": "Start of battle: Reduce the highest health enemy by 66%.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -6795,13 +6795,13 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Start of battle: Reduce the highest Health enemy by 100%.",
+                "description": "Start of battle: Reduce the highest health enemy by 99%.",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "ReduceHealth",
                     "target": {"kind": "HighestHealthEnemy"},
-                    "percentage": 100,
+                    "percentage": 99,
                 },
             },
             "probabilities": [
@@ -6896,19 +6896,19 @@ data = {
             "baseHealth": 5,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Start of turn: Discount shop food by 1 gold",
+                "description": "Start of turn: Discount all shop food by 1 gold",
                 "trigger": "StartOfTurn",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {"kind": "DiscountFood", "amount": 1},
             },
             "level2Ability": {
-                "description": "Start of turn: Discount shop food by 2 gold",
+                "description": "Start of turn: Discount all shop food by 2 gold",
                 "trigger": "StartOfTurn",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {"kind": "DiscountFood", "amount": 2},
             },
             "level3Ability": {
-                "description": "Start of turn: Discount shop food by 3 gold",
+                "description": "Start of turn: Discount all shop food by 3 gold",
                 "trigger": "StartOfTurn",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {"kind": "DiscountFood", "amount": 3},
@@ -7000,12 +7000,12 @@ data = {
                 "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
                 "unicodeCodePoint": "🪱",
             },
-            "tier": 4,
-            "baseAttack": 3,
+            "tier": 2,
+            "baseAttack": 1,
             "baseHealth": 3,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Eats shop food: Gain +1/+1",
+                "description": "Stock one 2-gold apple",
                 "trigger": "EatsShopFood",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -7017,7 +7017,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Eats shop food: Gain +2/+2",
+                "description": "Stock one 2-gold better apple",
                 "trigger": "EatsShopFood",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -7029,7 +7029,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "Eats shop food: Gain +3/+3",
+                "description": "Stock one 2-gold best apple",
                 "trigger": "EatsShopFood",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
@@ -7585,10 +7585,10 @@ data = {
             },
             "tier": 4,
             "baseAttack": 4,
-            "baseHealth": 3,
+            "baseHealth": 2,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "End Turn: Copy ability from pet ahead as lvl. 1 until end of battle.",
+                "description": "End Turn: Copy ability from the nearest pet ahead as level 1 until end of battle.",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -7599,7 +7599,7 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "End Turn: Copy ability from pet ahead as lvl. 2 until end of battle.",
+                "description": "End Turn: Copy ability from the nearest pet ahead as level 2 until end of battle.",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
@@ -7610,7 +7610,7 @@ data = {
                 },
             },
             "level3Ability": {
-                "description": "End Turn: Copy ability from pet ahead as lvl. 3 until end of battle.",
+                "description": "End Turn: Copy ability from the nearest pet ahead as level 3 until end of battle.",
                 "trigger": "EndOfTurn",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
