@@ -8383,8 +8383,8 @@ data = {
                 "unicodeCodePoint": "🦍",
             },
             "tier": 6,
-            "baseAttack": 6,
-            "baseHealth": 9,
+            "baseAttack": 7,
+            "baseHealth": 10,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
                 "description": "Hurt: Gain Coconut Shield. Works 1 time per turn.",
@@ -8549,8 +8549,8 @@ data = {
                 "unicodeCodePoint": "🦣",
             },
             "tier": 6,
-            "baseAttack": 3,
-            "baseHealth": 10,
+            "baseAttack": 4,
+            "baseHealth": 12,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
                 "description": "Faint: Give all friends +2/+2",
@@ -8835,8 +8835,8 @@ data = {
                 "unicodeCodePoint": "🐅",
             },
             "tier": 6,
-            "baseAttack": 4,
-            "baseHealth": 3,
+            "baseAttack": 6,
+            "baseHealth": 4,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
                 "description": "The friend ahead repeats their ability in battle as if they were level 1.",
