@@ -229,7 +229,7 @@ class Pet:
         Apply pet's sell ability when a friend (or self) is self
 
         Pets:
-            ["beaver", "duck", "pig", "pigeon", "shrimp", "owl"]
+            ["beaver", "duck", "pig", "pigeon", "shrimp", "owl", "pigeon"]
         """
         activated = False
         targets = []

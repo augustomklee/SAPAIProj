@@ -1817,7 +1817,7 @@ data = {
             "baseHealth": 1,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Sell: Stock one free Bread Crumbs",
+                "description": "Sell: Stock one free Bread Crumb",
                 "trigger": "Sell",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {"kind": "addBreadCrumb", "shop": "Food", "food": "food-bread-crumb"},
@@ -10596,6 +10596,30 @@ data = {
                     "target": {"kind": "PurchaseTarget"},
                     "attackAmount": 1,
                     "healthAmount": 2,
+                    "untilEndOfBattle": False,
+                },
+            },
+        },
+        "food-bread-crumb": {
+            "name": "Bread Crumb",
+            "id": "food-bread-crumb",
+            "notes": "This is free!",
+            "image": {
+                "source": "twemoji",
+                "commit": "793a6a93f303c08877dd6eb589b2fabb3d1c45ee", # change this
+                "unicodeCodePoint": "🥛", # change this
+            },
+            "tier": "Summoned",
+            "packs": ["StandardPack"],
+            "cost": 0,
+            "ability": {
+                "description": "Give one pet +1 attack.",
+                "triggeredBy": {"kind": "Self"},
+                "trigger": "Buy",
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "PurchaseTarget"},
+                    "attackAmount": 1,
                     "untilEndOfBattle": False,
                 },
             },

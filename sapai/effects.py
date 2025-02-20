@@ -612,14 +612,13 @@ def addBreadCrumb(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=Non
     targets = []
 
     # number of bread crumbs added depends on level of pigeon
-
-    # for level in range(apet.level):
-    #     if slot.slot_type == "food":
-    #         temp_food = Food("milk")
-    #         temp_food.attack *= level
-    #         temp_food.health *= level
-    #         slot.item = temp_food
-    #         targets.append(slot)
+    number_of_bread_crumbs = level
+    for slot in shop:
+        temp_food = Food("bread-crumb")
+        if slot.empty and number_of_bread_crumbs > 0:
+            number_of_bread_crumbs -= 1
+            slot.item = temp_food
+            targets.append(slot)
 
     return targets, [targets]
 
