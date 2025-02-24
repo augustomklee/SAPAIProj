@@ -621,6 +621,34 @@ def addBreadCrumb(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=Non
             targets.append(slot)
 
     return targets, [targets]
+    
+def addWormApple(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=None):
+    fixed_targets = fixed_targets or []
+
+    if apet.name != "pet-worm":
+        raise Exception("Only worms can add apples")
+    
+    shop = apet.shop
+    level = apet.level
+    targets = []
+
+    # the quality of the apple depends on level of the worm
+    if level == 1:
+        apple_quality = "food-apple"
+    elif level == 2:
+        apple_quality = "food-better-apple"
+    elif level == 3:
+        apple_quality = "food-best-apple"
+    
+    for slot in shop:
+        temp_food = Food(apple_quality)
+        temp_food.cost = 2
+        if slot.empty:
+            slot.item = temp_food
+            targets.append(slot)
+            break
+
+    return targets, [targets]
 
 
 def Evolve(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=None):

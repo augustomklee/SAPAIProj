@@ -9400,6 +9400,52 @@ data = {
                 },
             ],
         },
+        "food-better-apple": {
+            "name": "Better Apple",
+            "id": "food-better-apple",
+            "image": {
+                "source": "twemoji",
+                "commit": "793a6a93f303c08877dd6eb589b2fabb3d1c45ee", #TODO
+                "unicodeCodePoint": "🍎", #TODO
+            },
+            "tier": "Summoned",
+            "packs": ["StandardPack", "ExpansionPack1"],
+            "ability": {
+                "description": "Give an animal +2/+2.",
+                "triggeredBy": {"kind": "Self"},
+                "trigger": "Buy",
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "PurchaseTarget"},
+                    "attackAmount": 2,
+                    "healthAmount": 2,
+                    "untilEndOfBattle": False,
+                },
+            },
+        },
+        "food-best-apple": {
+            "name": "Best Apple",
+            "id": "food-best-apple",
+            "image": {
+                "source": "twemoji",
+                "commit": "793a6a93f303c08877dd6eb589b2fabb3d1c45ee", #TODO
+                "unicodeCodePoint": "🍎", #TODO
+            },
+            "tier": "Summoned",
+            "packs": ["StandardPack", "ExpansionPack1"],
+            "ability": {
+                "description": "Give an animal +3/+3.",
+                "triggeredBy": {"kind": "Self"},
+                "trigger": "Buy",
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "PurchaseTarget"},
+                    "attackAmount": 3,
+                    "healthAmount": 3,
+                    "untilEndOfBattle": False,
+                },
+            },
+        },
         "food-honey": {
             "name": "Honey",
             "id": "food-honey",
