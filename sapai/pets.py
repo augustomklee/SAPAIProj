@@ -525,7 +525,7 @@ class Pet:
             if trigger != pet_ahead:
                 return activated, targets, possible
         elif self.ability["triggeredBy"]["kind"] == "EachFriend":
-            if trigger == self:
+            if trigger != self:
                 ### Only time this doesn't activate is if it self triggered
                 return activated, targets, possible
         else:
