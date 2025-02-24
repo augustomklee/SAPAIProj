@@ -8125,6 +8125,90 @@ data = {
                 },
             ],
         },
+        "pet-wolverine": {
+            "name": "Wolverine",
+            "id": "pet-wolverine",
+            # "image": {
+            #     "source": "noto-emoji",
+            #     "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
+            #     "unicodeCodePoint": "🦊",
+            # },
+            "tier": 6,
+            "baseAttack": 5,
+            "baseHealth": 4,
+            "packs": ["StandardPack", "ExpansionPack1"],
+            "level1Ability": {
+                "description": "Four friends hurt: Remove 3 health from all enemies.",
+                "trigger": "FourFriendsHurt",
+                "triggeredBy": {"kind": "EachFriend"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "AllOpponents"},
+                    "healthAmount": -3,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "level2Ability": {
+                "description": "Four friends hurt: Remove 6 health from all enemies.",
+                "trigger": "FourFriendsHurt",
+                "triggeredBy": {"kind": "EachFriend"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "EachEnemy"},
+                    "healthAmount": -6,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "level3Ability": {
+                "description": "Four friends hurt: Remove 9 health from all enemies.",
+                "trigger": "FourFriendsHurt",
+                "triggeredBy": {"kind": "EachFriend"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "EachEnemy"},
+                    "healthAmount": -9,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "probabilities": [
+                {
+                    "kind": "shop",
+                    "turn": "turn-11",
+                    "perShop": {
+                        "StandardPack": 0.08328505725105906,
+                        "ExpansionPack1": 0.08328505725105906,
+                    },
+                    "perSlot": {
+                        "StandardPack": 0.017241379310344827,
+                        "ExpansionPack1": 0.017241379310344827,
+                    },
+                },
+                {
+                    "kind": "levelup",
+                    "turn": "turn-9",
+                    "perSlot": {
+                        "StandardPack": 0.1111111111111111,
+                        "ExpansionPack1": 0.1111111111111111,
+                    },
+                },
+                {
+                    "kind": "levelup",
+                    "turn": "turn-10",
+                    "perSlot": {
+                        "StandardPack": 0.1111111111111111,
+                        "ExpansionPack1": 0.1111111111111111,
+                    },
+                },
+                {
+                    "kind": "levelup",
+                    "turn": "turn-11",
+                    "perSlot": {
+                        "StandardPack": 0.1111111111111111,
+                        "ExpansionPack1": 0.1111111111111111,
+                    },
+                },
+            ],
+        },
         "pet-boar": {
             "name": "Boar",
             "id": "pet-boar",

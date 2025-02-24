@@ -37,6 +37,9 @@ class Pet:
         ### Used only for goat
         self.ability_counter = 0
 
+        # for wolverine
+        self.hurt_friends_count = 0 if name == "pet-wolverine" else None
+
         self.name = name
         if name not in data["pets"]:
             raise Exception(f"Pet {name} not found")
@@ -730,6 +733,25 @@ class Pet:
         )
 
         activated = True
+
+        # Notify any Wolverines on the team about hurt friends
+        if self.team is not None:
+            for slot in self.team:
+                if not slot.empty:
+                    pet = slot.pet
+                    if (pet.name == "pet-wolverine" and 
+                        pet.ability["trigger"] == "FourFriendsHurt" and
+                        pet != self):  # Don't count self being hurt
+                        pet.hurt_friends_count += 1
+                        if pet.hurt_friends_count == 4:
+                            # Activate Wolverine's ability
+                            func = get_effect_function(pet)
+                            pet_idx = pet.team.get_idx(pet)
+                            tiger_func(
+                                func, False, pet, [0, pet_idx], [pet.team, trigger], trigger
+                            )
+                            pet.hurt_friends_count = 0  # Reset counter
+
         return activated, targets, possible
 
     def knockout_trigger(self, trigger):
