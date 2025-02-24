@@ -910,6 +910,8 @@ def SummonPet(apet, apet_idx, teams, te=None, te_idx=None, fixed_targets=None):
         n = 2
     elif apet.name == "pet-rooster":
         n = apet.level
+    elif apet.name == "pet-rat":
+        n = apet.ability["effect"]["n"]
 
     target = []
     for _ in range(n):

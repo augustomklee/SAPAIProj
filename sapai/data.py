@@ -3217,33 +3217,36 @@ data = {
             "baseHealth": 6,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Faint: summon one 1/1 Dirty Rat for the opponent that betrays him.",
+                "description": "Faint: summon one 1/1 Dirty Rat up front for the opponent.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonPet",
                     "pet": "pet-dirty-rat",
                     "team": "Enemy",
+                    "n": 1,
                 },
             },
             "level2Ability": {
-                "description": "Faint: summon one 1/1 Dirty Rat for the opponent that betrays him.",
+                "description": "Faint: summon two 1/1 Dirty Rats up front for the opponent.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonPet",
                     "pet": "pet-dirty-rat",
                     "team": "Enemy",
+                    "n": 2,
                 },
             },
             "level3Ability": {
-                "description": "Faint: summon one 1/1 Dirty Rat for the opponent that betrays him.",
+                "description": "Faint: summon three 1/1 Dirty Rats up front for the opponent.",
                 "trigger": "Faint",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "SummonPet",
                     "pet": "pet-dirty-rat",
                     "team": "Enemy",
+                    "n": 3,
                 },
             },
             "probabilities": [
