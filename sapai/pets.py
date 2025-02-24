@@ -576,7 +576,7 @@ class Pet:
 
         Pets:
             ["mosquito", "bat", "whale", "dolphin", "skunk", "crocodile",
-            "leopard", "caterpillar lvl3"]
+            "leopard", "armadillo", "caterpillar lvl3"]
 
         """
         activated = False

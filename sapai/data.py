@@ -7277,6 +7277,82 @@ data = {
                 },
             ],
         },
+        "pet-armadillo": {
+            "name": "Armadillo",
+            "id": "pet-armadillo",
+            # "image": {
+            #     "source": "noto-emoji",
+            #     "commit": "e022fd6573782431ac9a65b520376b57511c31cd",
+            #     "unicodeCodePoint": "🦔",
+            # },
+            "tier": 5,
+            "baseAttack": 2,
+            "baseHealth": 6,
+            "packs": ["StandardPack"],
+            "level1Ability": {
+                "description": "Start of battle: Give all pets +8 health",
+                "trigger": "StartOfBattle",
+                "triggeredBy": {"kind": "Player"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "All"},
+                    "healthAmount": 8,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "level2Ability": {
+                "description": "Start of battle: Give all pets +16 health",
+                "trigger": "StartOfBattle",
+                "triggeredBy": {"kind": "Player"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "All"},
+                    "healthAmount": 16,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "level3Ability": {
+                "description": "Start of battle: Give all pets +24 health",
+                "trigger": "StartOfBattle",
+                "triggeredBy": {"kind": "Player"},
+                "effect": {
+                    "kind": "ModifyStats",
+                    "target": {"kind": "All"},
+                    "healthAmount": 24,
+                    "untilEndOfBattle": False,
+                },
+            },
+            "probabilities": [
+                {
+                    "kind": "shop",
+                    "turn": "turn-9",
+                    "perShop": {"StandardPack": 0.09796001985292535},
+                    "perSlot": {"StandardPack": 0.02040816326530612},
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-10",
+                    "perShop": {"StandardPack": 0.09796001985292535},
+                    "perSlot": {"StandardPack": 0.02040816326530612},
+                },
+                {
+                    "kind": "shop",
+                    "turn": "turn-11",
+                    "perShop": {"StandardPack": 0.08328505725105906},
+                    "perSlot": {"StandardPack": 0.017241379310344827},
+                },
+                {
+                    "kind": "levelup",
+                    "turn": "turn-7",
+                    "perSlot": {"StandardPack": 0.125},
+                },
+                {
+                    "kind": "levelup",
+                    "turn": "turn-8",
+                    "perSlot": {"StandardPack": 0.125},
+                },
+            ],
+        },
         "pet-crocodile": {
             "name": "Crocodile",
             "id": "pet-crocodile",
@@ -8140,10 +8216,10 @@ data = {
             "level1Ability": {
                 "description": "Four friends hurt: Remove 3 health from all enemies.",
                 "trigger": "FourFriendsHurt",
-                "triggeredBy": {"kind": "EachFriend"},
+                "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "target": {"kind": "AllOpponents"},
+                    "target": {"kind": "EachEnemy"},
                     "healthAmount": -3,
                     "untilEndOfBattle": False,
                 },
@@ -8151,7 +8227,7 @@ data = {
             "level2Ability": {
                 "description": "Four friends hurt: Remove 6 health from all enemies.",
                 "trigger": "FourFriendsHurt",
-                "triggeredBy": {"kind": "EachFriend"},
+                "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "EachEnemy"},
@@ -8162,7 +8238,7 @@ data = {
             "level3Ability": {
                 "description": "Four friends hurt: Remove 9 health from all enemies.",
                 "trigger": "FourFriendsHurt",
-                "triggeredBy": {"kind": "EachFriend"},
+                "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "EachEnemy"},

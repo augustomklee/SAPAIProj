@@ -500,12 +500,6 @@ def get_target(
         apet.seed_state = apet.rs.get_state()
         return possible[chosen_idx], possible
 
-    elif kind == "AllOpponents":
-        ret_pets = []
-        for temp_idx in oidx:
-            ret_pets.append(oteam[temp_idx].pet)
-        return ret_pets, [ret_pets]
-
     elif kind == "none":
         ### No targets
         return [], []
