@@ -524,12 +524,59 @@ def battle_phase_hurt_and_faint(battle_obj, phase, teams, pet_priority, phase_di
 
         ### Check every fainted pet
         faint_targets_list = []
+        
+        # Process summon pets first - this is key to fixing the bug
         for team_idx, pet_idx in fainted_list:
             fteam, oteam = get_teams([team_idx, pet_idx], teams)
             fainted_pet = fteam[pet_idx].pet
-            ### Check for all pets that trigger off this fainted pet (including self)
+            
+            # Only process self-summon abilities first (like Sheep, Rooster, etc.)
+            if fainted_pet.ability["trigger"] == "Faint" and fainted_pet.ability["triggeredBy"]["kind"] == "Self":
+                func = get_effect_function(fainted_pet)
+                if func in [RespawnPet, SummonPet, SummonRandomPet]:
+                    te_idx = [team_idx, pet_idx]
+                    activated, targets, possible = fainted_pet.faint_trigger(
+                        fainted_pet, te_idx, oteam
+                    )
+                    if activated:
+                        faint_targets_list.append(
+                            [
+                                fainted_pet,
+                                team_idx,
+                                pet_idx,
+                                activated,
+                                targets,
+                                possible,
+                            ]
+                        )
+                    append_phase_list(
+                        phase_list,
+                        fainted_pet,
+                        team_idx,
+                        pet_idx,
+                        activated,
+                        targets,
+                        possible,
+                    )
+        
+        # Process all other faint triggers (including Shark) after summons
+        for team_idx, pet_idx in fainted_list:
+            fteam, oteam = get_teams([team_idx, pet_idx], teams)
+            fainted_pet = fteam[pet_idx].pet
+            
+            # Skip if already processed above
+            if (fainted_pet.ability["trigger"] == "Faint" and 
+                fainted_pet.ability["triggeredBy"]["kind"] == "Self" and
+                get_effect_function(fainted_pet) in [RespawnPet, SummonPet, SummonRandomPet]):
+                continue
+                
+            ### Check for all other pets that trigger off this fainted pet
             for te_team_idx, te_pet_idx in pp:
                 other_pet = teams[te_team_idx][te_pet_idx].pet
+                # Skip self if already processed
+                if other_pet == fainted_pet and other_pet.ability["triggeredBy"]["kind"] == "Self":
+                    continue
+                    
                 te_idx = [te_team_idx, te_pet_idx]
                 activated, targets, possible = other_pet.faint_trigger(
                     fainted_pet, te_idx, oteam
@@ -553,15 +600,6 @@ def battle_phase_hurt_and_faint(battle_obj, phase, teams, pet_priority, phase_di
                     activated,
                     targets,
                     possible,
-                )
-
-            ### If no trigger was activated, then the pet was never removed.
-            ###   Check to see if it should be removed now.
-            if teams[team_idx].check_friend(fainted_pet):
-                teams[team_idx].remove(fainted_pet)
-                ### Add this info to phase list
-                phase_list.append(
-                    ("Fainted", (team_idx, pet_idx), (fainted_pet.__repr__()), [""])
                 )
 
         ### If pet was summoned, then need to check for summon triggers
