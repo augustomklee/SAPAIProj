@@ -217,6 +217,12 @@ class Pet:
         if type(trigger).__name__ != "Food":
             raise Exception("Must input purchased food as trigger for cat")
 
+        if "maxTriggers" in self.ability:
+            if self.ability_counter >= self.ability["maxTriggers"]:
+                return activated, targets, possible
+            else:
+                self.ability_counter += 1
+
         func = get_effect_function(self)
         pet_idx = self.team.get_idx(self)
         targets, possible = func(self, [0, pet_idx], [self.team], trigger)
@@ -525,7 +531,7 @@ class Pet:
             if trigger != pet_ahead:
                 return activated, targets, possible
         elif self.ability["triggeredBy"]["kind"] == "EachFriend":
-            if trigger != self:
+            if trigger == self:
                 ### Only time this doesn't activate is if it self triggered
                 return activated, targets, possible
         else:

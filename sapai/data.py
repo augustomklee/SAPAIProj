@@ -8249,22 +8249,25 @@ data = {
             "baseHealth": 5,
             "packs": ["StandardPack"],
             "level1Ability": {
-                "description": "Food with Health and Attack effects are doubled.",
+                "description": "Food with Health and Attack effects are doubled. Works 2 times per turn.",
                 "trigger": "PurchaseFood",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {"kind": "FoodMultiplier", "amount": 2},
+                "maxTriggers": 2,
             },
             "level2Ability": {
-                "description": "Food with Health and Attack effects are tripled.",
+                "description": "Food with Health and Attack effects are tripled. Works 2 times per turn.",
                 "trigger": "PurchaseFood",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {"kind": "FoodMultiplier", "amount": 3},
+                "maxTriggers": 2,
             },
             "level3Ability": {
-                "description": "Food with Health and Attack effects are quadrupled.",
+                "description": "Food with Health and Attack effects are quadrupled. Works 2 times per turn.",
                 "trigger": "PurchaseFood",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {"kind": "FoodMultiplier", "amount": 4},
+                "maxTriggers": 3,
             },
             "probabilities": [
                 {
