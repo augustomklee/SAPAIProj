@@ -289,6 +289,12 @@ class Pet:
         if self.ability["triggeredBy"]["kind"] == "Self":
             if trigger != self:
                 return activated, targets, possible
+            
+        if "maxTriggers" in self.ability:
+            if self.ability_counter >= self.ability["maxTriggers"]:
+                return activated, targets, possible
+            else:
+                self.ability_counter += 1
 
         func = get_effect_function(self)
         pet_idx = self.team.get_idx(self)
